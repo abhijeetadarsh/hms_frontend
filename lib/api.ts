@@ -1,4 +1,4 @@
-const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://hms.abhijeetadarsh.online";
+const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "https://hms.abhijeetadarsh.online";
 // const API_BASE_URL = process.env.NEXT_PUBLIC_API_URL || "http://localhost:8080";
 
 export const loginUser = async (credentials: { username: string; password: string }) => {
@@ -9,12 +9,13 @@ export const loginUser = async (credentials: { username: string; password: strin
     },
     body: JSON.stringify(credentials),
   });
-  // console.log(JSON.stringify(credentials));
-  // console.log(response);
+  console.log(JSON.stringify(credentials));
+  console.log(response);
 
   if (!response.ok) {
-    const error = await response.json();
-    throw new Error(error.message || "Login failed");
+    // const error = await response.json();
+    // throw new Error(error.message || "Login failed");
+    throw new Error("Login failed");
   }
 
   const data = await response.json();
