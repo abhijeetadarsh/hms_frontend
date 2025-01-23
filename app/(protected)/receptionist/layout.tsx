@@ -1,5 +1,5 @@
-import Toolbar from "@/components/Toolbar";
-import Sidebar from "@/components/Sidebar";
+import Toolbar from "@/components/(protected)/Toolbar";
+import Sidebar from "@/components/(protected)/Sidebar";
 
 export default function ProtectedLayout({ children }: { children: React.ReactNode }) {
   return (
