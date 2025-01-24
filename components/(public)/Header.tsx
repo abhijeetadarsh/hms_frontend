@@ -24,17 +24,9 @@ export default function Header() {
       <nav className="container mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
           {/* Left section with logo and desktop navigation */}
-          <div className="flex items-center space-x-8">
-            {/* Mobile Menu Toggle */}
-            <button
-              className="lg:hidden p-2 rounded-md hover:bg-gray-100"
-              onClick={toggleMenu}
-              aria-label="Toggle menu"
-            >
-              {isMenuOpen ? <X size={24} /> : <Menu size={24} />}
-            </button>
-            <Link href="/" className="text-2xl font-bold text-gray-800">
-              HMS
+          <div className="flex items-center">
+            <Link href="/" className="mr-8">
+              <img src="/assets/logo.svg" alt="Logo" className="h-8 w-auto" />
             </Link>
             {/* Desktop Navigation */}
             <div className="hidden lg:flex items-center space-x-6">
@@ -50,8 +42,13 @@ export default function Header() {
             </div>
           </div>
 
+          {/* Mobile Menu Toggle */}
+          <Button className="lg:hidden" size="icon" onClick={toggleMenu} aria-label="Toggle menu">
+            {isMenuOpen ? <X className="h-6 w-6 fill-current" /> : <Menu className="h-6 w-6 fill-current" />}
+          </Button>
+
           {/* Right section with auth buttons and mobile menu toggle */}
-          <div className="flex items-center space-x-4">
+          <div className="hidden lg:flex items-center space-x-4">
             <Button asChild className="text-sm font-medium">
               <Link href="/register">Register</Link>
             </Button>
@@ -74,6 +71,12 @@ export default function Header() {
                 {item.label}
               </Link>
             ))}
+            <Button asChild className="text-sm font-medium">
+              <Link href="/register">Register</Link>
+            </Button>
+            <Button variant="outline" asChild className="text-sm font-medium">
+              <Link href="/login">Login</Link>
+            </Button>
           </div>
         </div>
       </nav>

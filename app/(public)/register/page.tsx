@@ -30,10 +30,13 @@ export default function Register() {
   };
 
   return (
-    <div className="container mx-auto px-6 py-12">
-      <h1 className="text-3xl font-bold mb-8">Patient Registration</h1>
-      <form onSubmit={handleSubmit} className="max-w-2xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+    <div className="container mx-auto my-auto px-4 py-6">
+      <div className="max-w-4xl mx-auto overflow-hidden">
+        <div className="text-center mb-6">
+          <h1 className="text-2xl font-bold">Patient Registration</h1>
+          <p className="text-sm text-muted-foreground">Fill in your details below to register</p>
+        </div>
+        <form onSubmit={handleSubmit} className="grid grid-cols-1 md:grid-cols-2 gap-6 p-6 bg-white rounded-lg shadow">
           <div>
             <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
               Name
@@ -124,13 +127,13 @@ export default function Register() {
               onChange={handleChange}
             />
           </div>
-        </div>
-        <div className="mt-8">
-          <Button type="submit" className="w-full">
-            Register
-          </Button>
-        </div>
-      </form>
+          <div className="md:col-span-2 mt-6">
+            <Button type="submit" className="w-full py-3">
+              Register
+            </Button>
+          </div>
+        </form>
+      </div>
     </div>
   );
 }

@@ -43,12 +43,6 @@ const services = [
 ];
 
 export default function Abcd() {
-  const [isOpenDoctorDirectory, setIsOpenDoctorDirectory] = useState(false);
-
-  const toggleDoctorDirectory = () => {
-    setIsOpenDoctorDirectory(!isOpenDoctorDirectory);
-  };
-
   return (
     <div className="container mx-auto px-6 py-12">
       {/* Hero Section */}
