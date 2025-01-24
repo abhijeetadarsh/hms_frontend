@@ -54,10 +54,10 @@ export default function Abcd() {
           </p>
           <div className="flex gap-4">
             <Button size="lg" asChild>
-              <Link href="/appointments">Get Started</Link>
+              <Link href="/login">Get Started</Link>
             </Button>
             <Button size="lg" variant="outline" asChild>
-              <Link href="/about">Learn More</Link>
+              <Link href="/#about">Learn More</Link>
             </Button>
           </div>
         </div>
@@ -76,7 +76,7 @@ export default function Abcd() {
       </section>
 
       {/* Services Section */}
-      <section className="py-16">
+      <section id="services" className="py-16">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Our Services</h2>
           <p className="text-muted-foreground">Comprehensive healthcare solutions tailored to your needs</p>
@@ -101,7 +101,7 @@ export default function Abcd() {
 
       {/* Doctors Section */}
       <section id="doctors" className="py-16">
-        <h2 className="text-2xl font-semibold mb-4">Find a Doctor</h2>
+        <h2 className="text-3xl font-bold mb-4">Find a Doctor</h2>
         <div className="bg-slate-50 p-6 rounded-lg shadow-md">
           <p className="text-gray-600 mb-4">Search our directory of experienced medical professionals.</p>
           <div className="mt-6 border-t pt-6">
@@ -116,7 +116,7 @@ export default function Abcd() {
       </section>
 
       {/* About Section */}
-      <section className="py-16 bg-muted/20 rounded-lg">
+      <section id="about" className="py-16 bg-muted/20 rounded-lg">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
           {/* Image Section */}
           <div className="relative hidden h-[300px] md:block bg-muted">
@@ -131,7 +131,7 @@ export default function Abcd() {
           <div>
             <h2 className="text-3xl font-bold mb-4">About Our Hospital</h2>
             <p className="text-muted-foreground mb-6">
-              With over 15 years of excellence in healthcare, we’ve been committed to providing exceptional medical
+              With over 15 years of excellence in healthcare, we've been committed to providing exceptional medical
               services to our community. Our state-of-the-art facilities and dedicated team of professionals ensure the
               highest quality of patient care.
             </p>
@@ -157,8 +157,8 @@ export default function Abcd() {
       </section>
 
       {/* Contact Us Section */}
-      <section className="py-16">
-        <h2 className="text-3xl font-bold text-center mb-6">Contact Us</h2>
+      <section id="contact" className="py-16">
+        <h2 className="text-3xl font-bold text-center mb-4">Contact Us</h2>
         <p className="text-center text-muted-foreground mb-8">
           Get in touch with our medical professionals for appointments and inquiries.
         </p>

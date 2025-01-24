@@ -67,11 +67,11 @@ export default function Departments() {
 
   return (
     <>
-      <h2 className="text-2xl font-semibold mb-4">Our Departments</h2>
+      <h2 className="text-3xl font-bold mb-4">Our Departments</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {currentDepartments.map((dept) => (
           <div key={dept.id} className="bg-white p-6 rounded-lg shadow-md">
-            <h2 className="text-xl font-semibold mb-2">{dept.name}</h2>
+            <h3 className="text-xl font-semibold mb-2">{dept.name}</h3>
             <p className="text-gray-600 mb-4">{dept.description}</p>
             <Button asChild variant="outline">
               <Link href={`/departments/${dept.id}`}>Learn More</Link>

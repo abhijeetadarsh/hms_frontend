@@ -66,16 +66,16 @@ export default function Header() {
                 key={item.href}
                 href={item.href}
                 className="text-gray-700 hover:text-gray-900 px-2 py-1 rounded-md hover:bg-gray-100"
-                onClick={() => setIsMenuOpen(false)}
+                onClick={toggleMenu}
               >
                 {item.label}
               </Link>
             ))}
             <Button asChild className="text-sm font-medium">
-              <Link href="/register">Register</Link>
+              <Link href="/register" onClick={toggleMenu}>Register</Link>
             </Button>
             <Button variant="outline" asChild className="text-sm font-medium">
-              <Link href="/login">Login</Link>
+              <Link href="/login" onClick={toggleMenu}>Login</Link>
             </Button>
           </div>
         </div>
